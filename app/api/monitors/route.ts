@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
-    // 1. Lire la configuration depuis le JSON [cite: 41]
+    // 1. Lire la configuration depuis le JSON
     const db = readDB();
     if (!db.monitors) {
       return NextResponse.json(
@@ -25,24 +25,25 @@ export async function GET() {
           });
 
           const latency = Date.now() - start;
-          const status = response.ok ? "UP" : "DOWN";
 
           const logEntry = {
             monitorId: monitor.id,
-            status,
+            status: response.ok ? "UP" : "DOWN",
+            code: response.status,
+            message: response.statusText || (response.ok ? "OK" : "Error"),
             latency,
             timestamp: new Date().toISOString(),
           };
 
-          // 3. (Optionnel mais recommandé) : Sauvegarder ce ping dans les logs du JSON
-          // Pour l'instant on le prépare, on l'ajoutera à la fin du Promise.all
           return {
             ...monitor,
-            lastStatus: status,
+            lastStatus: logEntry.status,
             lastLatency: latency,
             logEntry,
           };
-        } catch (error) {
+        } catch (error: unknown) {
+          const message =
+            error instanceof Error ? error.message : "Network Error";
           return {
             ...monitor,
             lastStatus: "DOWN",
@@ -50,6 +51,8 @@ export async function GET() {
             logEntry: {
               monitorId: monitor.id,
               status: "DOWN",
+              code: 0, // 0 indique une erreur réseau (DNS, Timeout, etc.)
+              message,
               latency: 0,
               timestamp: new Date().toISOString(),
             },
@@ -58,12 +61,11 @@ export async function GET() {
       }),
     );
 
-    // 4. Mise à jour de l'historique dans le fichier JSON [cite: 9, 41]
+    // 4. Mise à jour de l'historique dans le fichier JSON
     const newLogs = updatedMonitors.map((m) => m.logEntry);
     db.logs = [...db.logs, ...newLogs].slice(-100);
     writeDB(db);
 
-    // 5. Renvoyer les données au Front
     return NextResponse.json(updatedMonitors);
   } catch (error) {
     return NextResponse.json(

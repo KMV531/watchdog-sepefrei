@@ -2,7 +2,7 @@
 
 import { AppSidebar } from "@/components/app-sidebar";
 import { ChartAreaInteractive } from "@/components/chart-area-interactive";
-import { DataTable } from "@/components/data-table";
+import { LogDataTable } from "@/components/data-table";
 import { SectionCards } from "@/components/section-cards";
 import { SiteHeader } from "@/components/site-header";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
@@ -14,7 +14,6 @@ export default function Page() {
   const [monitors, setMonitors] = useState<any[]>(initialData.monitors);
   const [loading, setLoading] = useState(true);
 
-  // On utilise useCallback pour stabiliser la fonction
   const fetchData = useCallback(async () => {
     try {
       const res = await fetch("/api/monitors");
@@ -53,15 +52,13 @@ export default function Page() {
         <div className="flex flex-1 flex-col">
           <div className="@container/main flex flex-1 flex-col gap-2">
             <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
-              {/* Utilise 'monitors' qui contient soit le JSON initial, soit l'API */}
               <SectionCards monitors={monitors} />
 
               <div className="px-4 lg:px-6">
                 <ChartAreaInteractive data={monitors} />
               </div>
 
-              {/* Utilise aussi 'monitors' ici pour que la table soit à jour */}
-              {/* <DataTable data={monitors} /> */}
+              <LogDataTable data={monitors} />
             </div>
           </div>
         </div>

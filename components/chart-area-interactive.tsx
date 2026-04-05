@@ -14,23 +14,13 @@ import {
   ChartTooltipContent,
   type ChartConfig,
 } from "@/components/ui/chart";
-
-// Interface pour tes données de monitoring
-interface Monitor {
-  id: string;
-  name: string;
-  lastLatency: number;
-  lastStatus: "UP" | "DOWN";
-}
+import { Monitor } from "@/lib/type";
 
 export function ChartAreaInteractive({ data = [] }: { data: Monitor[] }) {
-  // On transforme les données actuelles pour le graph (simulé sur une ligne de temps si pas de logs)
-  // Dans un vrai cas, tu bouclerais sur db.logs
   const chartData = data.map((m, index) => ({
     name: m.name,
     latency: m.lastStatus === "UP" ? m.lastLatency : 0,
     status: m.lastStatus,
-    // On simule une position X pour l'exemple
     index: index,
   }));
 
@@ -41,7 +31,6 @@ export function ChartAreaInteractive({ data = [] }: { data: Monitor[] }) {
     },
   } satisfies ChartConfig;
 
-  // On détecte s'il y a un service DOWN pour l'afficher en titre
   const downService = data.find((m) => m.lastStatus === "DOWN");
 
   return (
@@ -59,7 +48,7 @@ export function ChartAreaInteractive({ data = [] }: { data: Monitor[] }) {
       <CardContent className="px-2 pt-4 sm:px-6 sm:pt-6">
         <ChartContainer
           config={chartConfig}
-          className="aspect-auto h-[250px] w-full"
+          className="aspect-auto h-62.5 w-full"
         >
           <AreaChart data={chartData}>
             <defs>
@@ -101,7 +90,6 @@ export function ChartAreaInteractive({ data = [] }: { data: Monitor[] }) {
               strokeWidth={2}
             />
 
-            {/* TRUC GÉNIAL : On peut ajouter une ligne rouge si un service est critique */}
             {data.map(
               (m, i) =>
                 m.lastStatus === "DOWN" && (

@@ -1,6 +1,6 @@
 # Watchdog Junior - Supervision des services Sepefrei
 
-![Watchdog Junior Preview](./public/Thumbnail.png)
+![Watchdog Junior Preview](./public/thumbnail.png)
 
 Dashboard de supervision permettant de surveiller en temps réel la disponibilité des sites web de la Junior-Entreprise Sepefrei.
 

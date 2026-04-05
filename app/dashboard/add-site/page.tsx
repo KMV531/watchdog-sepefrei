@@ -47,7 +47,6 @@ const AddMonitorForm = () => {
             onChange={(e) => setName(e.target.value)}
             placeholder="Ex: Mon API"
             required
-            className="hover:cursor-pointer"
           />
         </Field>
         <Field>

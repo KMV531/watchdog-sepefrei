@@ -1,19 +1,19 @@
 import { readDB, writeDB } from "@/lib/db";
+import { Monitor } from "@/lib/type";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   try {
     const { name, url } = await req.json();
 
-    // Validation simple
     if (!name || !url) {
       return NextResponse.json({ error: "Nom et URL requis" }, { status: 400 });
     }
 
     const db = readDB();
 
-    // Vérification de doublon (Optionnel mais recommandé)
-    const exists = db.monitors.some((m: any) => m.url === url);
+    // Vérification de doublon
+    const exists = db.monitors.some((m: Monitor) => m.url === url);
     if (exists) {
       return NextResponse.json(
         { error: "Ce service existe déjà" },
@@ -21,15 +21,13 @@ export async function POST(req: Request) {
       );
     }
 
-    // Génération automatique des données
-    const newMonitor = {
-      id: (db.monitors.length + 1).toString(), // Incrémentation simple
+    const newMonitor: Monitor = {
+      id: (db.monitors.length + 1).toString(),
       name,
       url,
-      frequency: 60, // Fréquence par défaut
+      frequency: 60,
     };
 
-    // Mise à jour de la DB
     db.monitors.push(newMonitor);
     writeDB(db);
 

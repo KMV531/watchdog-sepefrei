@@ -11,7 +11,6 @@ import {
   type ColumnDef,
 } from "@tanstack/react-table";
 import { z } from "zod";
-
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -24,10 +23,22 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+import {
   CircleCheckIcon,
   CircleXIcon,
   ClockIcon,
   ExternalLink,
+  Trash2,
 } from "lucide-react";
 
 // Schema pour les logs
@@ -144,10 +155,74 @@ const columns: ColumnDef<Log>[] = [
       );
     },
   },
+  {
+    id: "actions",
+    header: "Actions",
+    cell: ({ row, table }) => {
+      const meta = table.options.meta as { onDelete?: (id: string) => void };
+      const serviceName = row.original.name;
+
+      return (
+        <AlertDialog>
+          <AlertDialogTrigger>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 hover:cursor-pointer"
+            >
+              <Trash2 className="size-4" />
+            </Button>
+          </AlertDialogTrigger>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>Supprimer {serviceName} ?</AlertDialogTitle>
+              <AlertDialogDescription>
+                Cette action est irréversible. Cela supprimera le moniteur ainsi
+                que tout l&apos;historique des logs associés de nos serveurs.
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel className={"hover:cursor-pointer"}>
+                Annuler
+              </AlertDialogCancel>
+              <AlertDialogAction
+                className="bg-destructive text-destructive-foreground hover:bg-destructive/90 hover:cursor-pointer text-white"
+                onClick={() => meta?.onDelete?.(row.original.id)}
+              >
+                Supprimer
+              </AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
+      );
+    },
+  },
 ];
 
-export function LogDataTable({ data }: { data: Log[] }) {
+export function LogDataTable({
+  data,
+  onRefresh,
+}: {
+  data: Log[];
+  onRefresh: () => void;
+}) {
   const [globalFilter, setGlobalFilter] = React.useState("");
+
+  const handleDelete = async (id: string) => {
+    try {
+      const res = await fetch("/api/monitors/delete", {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id }),
+      });
+
+      if (res.ok) {
+        onRefresh();
+      }
+    } catch (error) {
+      console.error("Erreur suppression:", error);
+    }
+  };
 
   const table = useReactTable({
     data,
@@ -157,6 +232,9 @@ export function LogDataTable({ data }: { data: Log[] }) {
     },
     onGlobalFilterChange: setGlobalFilter,
     getCoreRowModel: getCoreRowModel(),
+    meta: {
+      onDelete: handleDelete,
+    },
     getFilteredRowModel: getFilteredRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     getSortedRowModel: getSortedRowModel(),

@@ -1,0 +1,642 @@
+{
+  "monitors": [
+    {
+      "id": "1",
+      "name": "Sepefrei Main",
+      "url": "https://sepefrei.fr",
+      "frequency": 60
+    },
+    {
+      "id": "2",
+      "name": "Link Sepefrei",
+      "url": "https://link.sepefrei.fr",
+      "frequency": 60
+    },
+    {
+      "id": "3",
+      "name": "Etudiant",
+      "url": "https://etudiant.sepefrei.fr",
+      "frequency": 60
+    },
+    {
+      "id": "4",
+      "name": "Portainer",
+      "url": "https://portainer.sepefrei.fr",
+      "frequency": 60
+    },
+    {
+      "id": "5",
+      "name": "Plausible",
+      "url": "https://plausible.sepefrei.fr",
+      "frequency": 60
+    },
+    {
+      "id": "6",
+      "name": "n8n",
+      "url": "https://n8n.sepefrei.fr",
+      "frequency": 60
+    }
+  ],
+  "logs": [
+    {
+      "monitorId": "3",
+      "status": "UP",
+      "latency": 44,
+      "timestamp": "2026-04-05T13:29:14.812Z"
+    },
+    {
+      "monitorId": "4",
+      "status": "UP",
+      "latency": 48,
+      "timestamp": "2026-04-05T13:29:14.817Z"
+    },
+    {
+      "monitorId": "5",
+      "status": "DOWN",
+      "latency": 0,
+      "timestamp": "2026-04-05T13:29:14.777Z"
+    },
+    {
+      "monitorId": "6",
+      "status": "UP",
+      "latency": 46,
+      "timestamp": "2026-04-05T13:29:14.818Z"
+    },
+    {
+      "monitorId": "1",
+      "status": "UP",
+      "latency": 46,
+      "timestamp": "2026-04-05T13:29:14.991Z"
+    },
+    {
+      "monitorId": "2",
+      "status": "UP",
+      "latency": 37,
+      "timestamp": "2026-04-05T13:29:14.984Z"
+    },
+    {
+      "monitorId": "3",
+      "status": "UP",
+      "latency": 43,
+      "timestamp": "2026-04-05T13:29:14.991Z"
+    },
+    {
+      "monitorId": "4",
+      "status": "UP",
+      "latency": 49,
+      "timestamp": "2026-04-05T13:29:14.998Z"
+    },
+    {
+      "monitorId": "5",
+      "status": "DOWN",
+      "latency": 0,
+      "timestamp": "2026-04-05T13:29:14.954Z"
+    },
+    {
+      "monitorId": "6",
+      "status": "UP",
+      "latency": 48,
+      "timestamp": "2026-04-05T13:29:15.000Z"
+    },
+    {
+      "monitorId": "1",
+      "status": "UP",
+      "latency": 45,
+      "timestamp": "2026-04-05T13:29:15.196Z"
+    },
+    {
+      "monitorId": "2",
+      "status": "UP",
+      "latency": 40,
+      "timestamp": "2026-04-05T13:29:15.191Z"
+    },
+    {
+      "monitorId": "3",
+      "status": "UP",
+      "latency": 43,
+      "timestamp": "2026-04-05T13:29:15.195Z"
+    },
+    {
+      "monitorId": "4",
+      "status": "UP",
+      "latency": 49,
+      "timestamp": "2026-04-05T13:29:15.202Z"
+    },
+    {
+      "monitorId": "5",
+      "status": "DOWN",
+      "latency": 0,
+      "timestamp": "2026-04-05T13:29:15.156Z"
+    },
+    {
+      "monitorId": "6",
+      "status": "UP",
+      "latency": 50,
+      "timestamp": "2026-04-05T13:29:15.205Z"
+    },
+    {
+      "monitorId": "1",
+      "status": "UP",
+      "latency": 44,
+      "timestamp": "2026-04-05T13:29:15.401Z"
+    },
+    {
+      "monitorId": "2",
+      "status": "UP",
+      "latency": 39,
+      "timestamp": "2026-04-05T13:29:15.397Z"
+    },
+    {
+      "monitorId": "3",
+      "status": "UP",
+      "latency": 45,
+      "timestamp": "2026-04-05T13:29:15.404Z"
+    },
+    {
+      "monitorId": "4",
+      "status": "UP",
+      "latency": 46,
+      "timestamp": "2026-04-05T13:29:15.405Z"
+    },
+    {
+      "monitorId": "5",
+      "status": "DOWN",
+      "latency": 0,
+      "timestamp": "2026-04-05T13:29:15.366Z"
+    },
+    {
+      "monitorId": "6",
+      "status": "UP",
+      "latency": 50,
+      "timestamp": "2026-04-05T13:29:15.413Z"
+    },
+    {
+      "monitorId": "1",
+      "status": "UP",
+      "latency": 44,
+      "timestamp": "2026-04-05T13:29:15.577Z"
+    },
+    {
+      "monitorId": "2",
+      "status": "UP",
+      "latency": 39,
+      "timestamp": "2026-04-05T13:29:15.574Z"
+    },
+    {
+      "monitorId": "3",
+      "status": "UP",
+      "latency": 43,
+      "timestamp": "2026-04-05T13:29:15.578Z"
+    },
+    {
+      "monitorId": "4",
+      "status": "UP",
+      "latency": 51,
+      "timestamp": "2026-04-05T13:29:15.587Z"
+    },
+    {
+      "monitorId": "5",
+      "status": "DOWN",
+      "latency": 0,
+      "timestamp": "2026-04-05T13:29:15.540Z"
+    },
+    {
+      "monitorId": "6",
+      "status": "UP",
+      "latency": 54,
+      "timestamp": "2026-04-05T13:29:15.593Z"
+    },
+    {
+      "monitorId": "1",
+      "status": "UP",
+      "latency": 45,
+      "timestamp": "2026-04-05T13:29:15.782Z"
+    },
+    {
+      "monitorId": "2",
+      "status": "UP",
+      "latency": 37,
+      "timestamp": "2026-04-05T13:29:15.775Z"
+    },
+    {
+      "monitorId": "3",
+      "status": "UP",
+      "latency": 43,
+      "timestamp": "2026-04-05T13:29:15.782Z"
+    },
+    {
+      "monitorId": "4",
+      "status": "UP",
+      "latency": 52,
+      "timestamp": "2026-04-05T13:29:15.792Z"
+    },
+    {
+      "monitorId": "5",
+      "status": "DOWN",
+      "latency": 0,
+      "timestamp": "2026-04-05T13:29:15.746Z"
+    },
+    {
+      "monitorId": "6",
+      "status": "UP",
+      "latency": 47,
+      "timestamp": "2026-04-05T13:29:15.791Z"
+    },
+    {
+      "monitorId": "1",
+      "status": "UP",
+      "latency": 45,
+      "timestamp": "2026-04-05T13:29:15.959Z"
+    },
+    {
+      "monitorId": "2",
+      "status": "UP",
+      "latency": 39,
+      "timestamp": "2026-04-05T13:29:15.954Z"
+    },
+    {
+      "monitorId": "3",
+      "status": "UP",
+      "latency": 43,
+      "timestamp": "2026-04-05T13:29:15.959Z"
+    },
+    {
+      "monitorId": "4",
+      "status": "UP",
+      "latency": 48,
+      "timestamp": "2026-04-05T13:29:15.965Z"
+    },
+    {
+      "monitorId": "5",
+      "status": "DOWN",
+      "latency": 0,
+      "timestamp": "2026-04-05T13:29:15.920Z"
+    },
+    {
+      "monitorId": "6",
+      "status": "UP",
+      "latency": 48,
+      "timestamp": "2026-04-05T13:29:15.967Z"
+    },
+    {
+      "monitorId": "1",
+      "status": "UP",
+      "latency": 45,
+      "timestamp": "2026-04-05T13:29:16.194Z"
+    },
+    {
+      "monitorId": "2",
+      "status": "UP",
+      "latency": 36,
+      "timestamp": "2026-04-05T13:29:16.186Z"
+    },
+    {
+      "monitorId": "3",
+      "status": "UP",
+      "latency": 44,
+      "timestamp": "2026-04-05T13:29:16.195Z"
+    },
+    {
+      "monitorId": "4",
+      "status": "UP",
+      "latency": 47,
+      "timestamp": "2026-04-05T13:29:16.198Z"
+    },
+    {
+      "monitorId": "5",
+      "status": "DOWN",
+      "latency": 0,
+      "timestamp": "2026-04-05T13:29:16.158Z"
+    },
+    {
+      "monitorId": "6",
+      "status": "UP",
+      "latency": 50,
+      "timestamp": "2026-04-05T13:29:16.204Z"
+    },
+    {
+      "monitorId": "1",
+      "status": "UP",
+      "latency": 44,
+      "timestamp": "2026-04-05T13:29:16.424Z"
+    },
+    {
+      "monitorId": "2",
+      "status": "UP",
+      "latency": 38,
+      "timestamp": "2026-04-05T13:29:16.419Z"
+    },
+    {
+      "monitorId": "3",
+      "status": "UP",
+      "latency": 44,
+      "timestamp": "2026-04-05T13:29:16.425Z"
+    },
+    {
+      "monitorId": "4",
+      "status": "UP",
+      "latency": 47,
+      "timestamp": "2026-04-05T13:29:16.429Z"
+    },
+    {
+      "monitorId": "5",
+      "status": "DOWN",
+      "latency": 0,
+      "timestamp": "2026-04-05T13:29:16.385Z"
+    },
+    {
+      "monitorId": "6",
+      "status": "UP",
+      "latency": 47,
+      "timestamp": "2026-04-05T13:29:16.431Z"
+    },
+    {
+      "monitorId": "1",
+      "status": "UP",
+      "latency": 44,
+      "timestamp": "2026-04-05T13:29:16.608Z"
+    },
+    {
+      "monitorId": "2",
+      "status": "UP",
+      "latency": 40,
+      "timestamp": "2026-04-05T13:29:16.605Z"
+    },
+    {
+      "monitorId": "3",
+      "status": "UP",
+      "latency": 43,
+      "timestamp": "2026-04-05T13:29:16.609Z"
+    },
+    {
+      "monitorId": "4",
+      "status": "UP",
+      "latency": 57,
+      "timestamp": "2026-04-05T13:29:16.623Z"
+    },
+    {
+      "monitorId": "5",
+      "status": "DOWN",
+      "latency": 0,
+      "timestamp": "2026-04-05T13:29:16.570Z"
+    },
+    {
+      "monitorId": "6",
+      "status": "UP",
+      "latency": 46,
+      "timestamp": "2026-04-05T13:29:16.615Z"
+    },
+    {
+      "monitorId": "1",
+      "status": "UP",
+      "latency": 45,
+      "timestamp": "2026-04-05T13:29:16.794Z"
+    },
+    {
+      "monitorId": "2",
+      "status": "UP",
+      "latency": 36,
+      "timestamp": "2026-04-05T13:29:16.786Z"
+    },
+    {
+      "monitorId": "3",
+      "status": "UP",
+      "latency": 42,
+      "timestamp": "2026-04-05T13:29:16.793Z"
+    },
+    {
+      "monitorId": "4",
+      "status": "UP",
+      "latency": 47,
+      "timestamp": "2026-04-05T13:29:16.798Z"
+    },
+    {
+      "monitorId": "5",
+      "status": "DOWN",
+      "latency": 0,
+      "timestamp": "2026-04-05T13:29:16.754Z"
+    },
+    {
+      "monitorId": "6",
+      "status": "UP",
+      "latency": 48,
+      "timestamp": "2026-04-05T13:29:16.802Z"
+    },
+    {
+      "monitorId": "1",
+      "status": "UP",
+      "latency": 45,
+      "timestamp": "2026-04-05T13:29:16.972Z"
+    },
+    {
+      "monitorId": "2",
+      "status": "UP",
+      "latency": 38,
+      "timestamp": "2026-04-05T13:29:16.966Z"
+    },
+    {
+      "monitorId": "3",
+      "status": "UP",
+      "latency": 43,
+      "timestamp": "2026-04-05T13:29:16.971Z"
+    },
+    {
+      "monitorId": "4",
+      "status": "UP",
+      "latency": 47,
+      "timestamp": "2026-04-05T13:29:16.976Z"
+    },
+    {
+      "monitorId": "5",
+      "status": "DOWN",
+      "latency": 0,
+      "timestamp": "2026-04-05T13:29:16.932Z"
+    },
+    {
+      "monitorId": "6",
+      "status": "UP",
+      "latency": 46,
+      "timestamp": "2026-04-05T13:29:16.977Z"
+    },
+    {
+      "monitorId": "1",
+      "status": "UP",
+      "latency": 45,
+      "timestamp": "2026-04-05T13:29:17.165Z"
+    },
+    {
+      "monitorId": "2",
+      "status": "UP",
+      "latency": 41,
+      "timestamp": "2026-04-05T13:29:17.162Z"
+    },
+    {
+      "monitorId": "3",
+      "status": "UP",
+      "latency": 44,
+      "timestamp": "2026-04-05T13:29:17.167Z"
+    },
+    {
+      "monitorId": "4",
+      "status": "UP",
+      "latency": 51,
+      "timestamp": "2026-04-05T13:29:17.175Z"
+    },
+    {
+      "monitorId": "5",
+      "status": "DOWN",
+      "latency": 0,
+      "timestamp": "2026-04-05T13:29:17.130Z"
+    },
+    {
+      "monitorId": "6",
+      "status": "UP",
+      "latency": 47,
+      "timestamp": "2026-04-05T13:29:17.175Z"
+    },
+    {
+      "monitorId": "1",
+      "status": "UP",
+      "latency": 44,
+      "timestamp": "2026-04-05T13:29:17.373Z"
+    },
+    {
+      "monitorId": "2",
+      "status": "UP",
+      "latency": 36,
+      "timestamp": "2026-04-05T13:29:17.367Z"
+    },
+    {
+      "monitorId": "3",
+      "status": "UP",
+      "latency": 43,
+      "timestamp": "2026-04-05T13:29:17.374Z"
+    },
+    {
+      "monitorId": "4",
+      "status": "UP",
+      "latency": 52,
+      "timestamp": "2026-04-05T13:29:17.384Z"
+    },
+    {
+      "monitorId": "5",
+      "status": "DOWN",
+      "latency": 0,
+      "timestamp": "2026-04-05T13:29:17.337Z"
+    },
+    {
+      "monitorId": "6",
+      "status": "UP",
+      "latency": 47,
+      "timestamp": "2026-04-05T13:29:17.382Z"
+    },
+    {
+      "monitorId": "1",
+      "status": "UP",
+      "latency": 45,
+      "timestamp": "2026-04-05T13:29:17.582Z"
+    },
+    {
+      "monitorId": "2",
+      "status": "UP",
+      "latency": 38,
+      "timestamp": "2026-04-05T13:29:17.575Z"
+    },
+    {
+      "monitorId": "3",
+      "status": "UP",
+      "latency": 43,
+      "timestamp": "2026-04-05T13:29:17.581Z"
+    },
+    {
+      "monitorId": "4",
+      "status": "UP",
+      "latency": 51,
+      "timestamp": "2026-04-05T13:29:17.589Z"
+    },
+    {
+      "monitorId": "5",
+      "status": "DOWN",
+      "latency": 0,
+      "timestamp": "2026-04-05T13:29:17.554Z"
+    },
+    {
+      "monitorId": "6",
+      "status": "UP",
+      "latency": 48,
+      "timestamp": "2026-04-05T13:29:17.588Z"
+    },
+    {
+      "monitorId": "1",
+      "status": "UP",
+      "latency": 44,
+      "timestamp": "2026-04-05T13:29:17.768Z"
+    },
+    {
+      "monitorId": "2",
+      "status": "UP",
+      "latency": 36,
+      "timestamp": "2026-04-05T13:29:17.761Z"
+    },
+    {
+      "monitorId": "3",
+      "status": "UP",
+      "latency": 45,
+      "timestamp": "2026-04-05T13:29:17.770Z"
+    },
+    {
+      "monitorId": "4",
+      "status": "UP",
+      "latency": 47,
+      "timestamp": "2026-04-05T13:29:17.773Z"
+    },
+    {
+      "monitorId": "5",
+      "status": "DOWN",
+      "latency": 0,
+      "timestamp": "2026-04-05T13:29:17.729Z"
+    },
+    {
+      "monitorId": "6",
+      "status": "UP",
+      "latency": 46,
+      "timestamp": "2026-04-05T13:29:17.774Z"
+    },
+    {
+      "monitorId": "1",
+      "status": "UP",
+      "latency": 45,
+      "timestamp": "2026-04-05T13:29:17.961Z"
+    },
+    {
+      "monitorId": "2",
+      "status": "UP",
+      "latency": 37,
+      "timestamp": "2026-04-05T13:29:17.955Z"
+    },
+    {
+      "monitorId": "3",
+      "status": "UP",
+      "latency": 44,
+      "timestamp": "2026-04-05T13:29:17.962Z"
+    },
+    {
+      "monitorId": "4",
+      "status": "UP",
+      "latency": 50,
+      "timestamp": "2026-04-05T13:29:17.969Z"
+    },
+    {
+      "monitorId": "5",
+      "status": "DOWN",
+      "latency": 0,
+      "timestamp": "2026-04-05T13:29:17.924Z"
+    },
+    {
+      "monitorId": "6",
+      "status": "UP",
+      "latency": 48,
+      "timestamp": "2026-04-05T13:29:17.971Z"
+    }
+  ]
+}

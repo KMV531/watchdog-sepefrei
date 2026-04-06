@@ -11,7 +11,8 @@ export function SiteHeader() {
           className="mx-2 h-4 data-vertical:self-auto"
         />
         <h1 className="text-base font-medium">
-          Supervision des services Sepefrei
+          Dashboard de supervision permettant de surveiller en temps réel la
+          disponibilité des sites web de la Junior-Entreprise Sepefrei.
         </h1>
       </div>
     </header>
